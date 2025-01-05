@@ -19,6 +19,7 @@ import {
 import { useQueryClient } from "@tanstack/react-query";
 import { useSearchParams } from "react-router-dom";
 import { getParamEntries, parsePageParam } from "../utils/searchParamHelpers";
+import { PageTitle } from "components/elements/BattlecodeStyle";
 
 interface SubmissionFormInput {
   file: FileList;
@@ -74,9 +75,7 @@ const Submissions: React.FC = () => {
 
   return (
     <div className="flex h-full w-full flex-col overflow-auto p-6">
-      <h1 className="mb-5 text-3xl font-bold leading-7 text-gray-900">
-        Submissions
-      </h1>
+      <PageTitle>Submissions</PageTitle>
 
       <SectionCard
         title="Next Submission Deadline"
@@ -197,10 +196,10 @@ const CodeSubmission: React.FC = () => {
             {...register("file", { required: FIELD_REQUIRED_ERROR_MSG })}
           />
         </div>
-        <div className="flex w-full flex-row items-end gap-10">
+        <div className="flex w-full flex-col items-start gap-4 lg:flex-row lg:items-end">
           <Input
-            className="w-1/3"
-            label="Package Name (i.e. where is RobotPlayer?)"
+            className="w-full lg:w-1/3"
+            label="Package Name (i.e. examplefuncsplayer)"
             required
             errorMessage={errors.packageName?.message}
             {...register("packageName", {
@@ -208,7 +207,7 @@ const CodeSubmission: React.FC = () => {
             })}
           />
           <Input
-            className="w-2/3"
+            className="w-full lg:w-2/3"
             label="Description (for your reference)"
             required
             errorMessage={errors.description?.message}

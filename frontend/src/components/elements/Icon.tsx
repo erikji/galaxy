@@ -17,6 +17,8 @@ import {
   EyeIcon as EyeIcon24,
   EyeSlashIcon as EyeSlashIcon24,
   ShieldCheckIcon as ShieldCheckIcon24,
+  ChevronLeftIcon as ChevronLeftIcon24,
+  ChevronRightIcon as ChevronRightIcon24,
 } from "@heroicons/react/24/outline";
 
 import {
@@ -37,6 +39,8 @@ import {
   EyeIcon as EyeIcon20,
   EyeSlashIcon as EyeSlashIcon20,
   ShieldCheckIcon as ShieldCheckIcon20,
+  ChevronLeftIcon as ChevronLeftIcon20,
+  ChevronRightIcon as ChevronRightIcon20,
 } from "@heroicons/react/20/solid";
 
 const icons24 = {
@@ -57,6 +61,8 @@ const icons24 = {
   eye: EyeIcon24,
   eye_slash: EyeSlashIcon24,
   shield_check: ShieldCheckIcon24,
+  chevron_left: ChevronLeftIcon24,
+  chevron_right: ChevronRightIcon24,
 };
 
 const icons20 = {
@@ -77,6 +83,8 @@ const icons20 = {
   eye: EyeIcon20,
   eye_slash: EyeSlashIcon20,
   shield_check: ShieldCheckIcon20,
+  chevron_left: ChevronLeftIcon20,
+  chevron_right: ChevronRightIcon20,
 };
 
 export type IconName = keyof typeof icons24;
